@@ -1,10 +1,12 @@
 # desafio-itau-backend
 
+# Link original: <https://github.com/feltex/desafio-itau-backend>
+
 # Itaú Unibanco - Desafio de Programação
 
 Este é um desafio bacana tanto de desenvolvimento de software quanto de engenharia de software. Queremos testar sua capacidade de construir um software com várias partes diferentes funcionando em conjunto!
 
-Vídeo no youtube https://youtu.be/uke3i4uOejs
+Vídeo no youtube <https://youtu.be/uke3i4uOejs>
 
 ## 1. Introdução
 
@@ -12,7 +14,7 @@ Sua missão, caso você aceite, é criar uma API REST que recebe Transações e 
 
 Um bom lugar para se começar é o [Spring Starter](https://start.spring.io/).
 
->**Dica:** Não existe uma forma certa ou errada de resolver o desafio! Vamos avaliar coisas como a qualidade do seu código, o quão fácil é de compreender o código, organização do projeto, quantidade e qualidade dos testes, preocupação com segurança e vários outros fatores :)
+> **Dica:** Não existe uma forma certa ou errada de resolver o desafio! Vamos avaliar coisas como a qualidade do seu código, o quão fácil é de compreender o código, organização do projeto, quantidade e qualidade dos testes, preocupação com segurança e vários outros fatores :)
 
 ## 2. Definição do desafio
 
@@ -36,7 +38,7 @@ Seu projeto:
 - **DEVE** armazenar todos os dados **em memória**
 - **DEVE** aceitar e responder apenas com [JSON](https://www.json.org/json-pt.html)
 
->**Atenção!** Por motivos de segurança, não podemos aceitar projetos enviados como arquivos. Você **DEVE** disponibilizar seu projeto publicamente para que possamos acessá-lo e corrigi-lo! Após receber uma resposta de nós, sinta-se livre para tornar seu projeto **privado** :)
+> **Atenção!** Por motivos de segurança, não podemos aceitar projetos enviados como arquivos. Você **DEVE** disponibilizar seu projeto publicamente para que possamos acessá-lo e corrigi-lo! Após receber uma resposta de nós, sinta-se livre para tornar seu projeto **privado** :)
 
 ### 2.2. Endpoints da API
 
@@ -48,19 +50,19 @@ Este é o endpoint que irá receber as Transações. Cada transação consiste d
 
 ```json
 {
-    "valor": 123.45,
-    "dataHora": "2020-08-07T12:34:56.789-03:00"
+  "valor": 123.45,
+  "dataHora": "2020-08-07T12:34:56.789-03:00"
 }
 ```
 
 Os campos no JSON acima significam o seguinte:
 
 | Campo      | Significado                                                   | Obrigatório? |
-|------------|---------------------------------------------------------------|--------------|
+| ---------- | ------------------------------------------------------------- | ------------ |
 | `valor`    | **Valor em decimal com ponto flutuante** da transação         | Sim          |
 | `dataHora` | **Data/Hora no padrão ISO 8601** em que a transação aconteceu | Sim          |
 
->**Dica:** O Spring Boot, por padrão, consegue compreender datas no padrão ISO 8601 sem problemas. Experimente utilizar um atributo do tipo `OffsetDateTime`!
+> **Dica:** O Spring Boot, por padrão, consegue compreender datas no padrão ISO 8601 sem problemas. Experimente utilizar um atributo do tipo `OffsetDateTime`!
 
 A API só aceitará transações que:
 
@@ -94,25 +96,25 @@ Este endpoint deve retornar estatísticas das transações que **aconteceram nos
 
 ```json
 {
-    "count": 10,
-    "sum": 1234.56,
-    "avg": 123.456,
-    "min": 12.34,
-    "max": 123.56
+  "count": 10,
+  "sum": 1234.56,
+  "avg": 123.456,
+  "min": 12.34,
+  "max": 123.56
 }
 ```
 
 Os campos no JSON acima significam o seguinte:
 
-|  Campo  | Significado                                                   | Obrigatório? |
-|---------|---------------------------------------------------------------|--------------|
+| Campo   | Significado                                                   | Obrigatório? |
+| ------- | ------------------------------------------------------------- | ------------ |
 | `count` | **Quantidade de transações** nos últimos 60 segundos          | Sim          |
 | `sum`   | **Soma total do valor** transacionado nos últimos 60 segundos | Sim          |
 | `avg`   | **Média do valor** transacionado nos últimos 60 segundos      | Sim          |
 | `min`   | **Menor valor** transacionado nos últimos 60 segundos         | Sim          |
 | `max`   | **Maior valor** transacionado nos últimos 60 segundos         | Sim          |
 
->**Dica:** Há um objeto no Java 8+ chamado `DoubleSummaryStatistics` que pode lhe ajudar ou servir de inspiração.
+> **Dica:** Há um objeto no Java 8+ chamado `DoubleSummaryStatistics` que pode lhe ajudar ou servir de inspiração.
 
 Como resposta, espera-se que este endpoint responda com:
 
