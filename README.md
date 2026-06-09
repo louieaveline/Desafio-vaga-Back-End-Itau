@@ -1,5 +1,4 @@
 # desafio-itau-backend
-# Link original: https://github.com/feltex/desafio-itau-backend
 
 # Itaú Unibanco - Desafio de Programação
 
